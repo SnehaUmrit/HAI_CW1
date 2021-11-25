@@ -1,0 +1,49 @@
+﻿user_query,bot_answer,user_intent
+Hi there!,Hello there! What is your name?,small talk
+Hi there!,Hi! Can I have your name please?,small talk
+Hi there!,Hello! What is your name?,small talk
+Hi there!,Hi there! How may I call you?,small talk
+Hi there!,Hey!! Can I have your name please?,small talk
+My name is sneha,Great! Hi Sneha! How can I help you?,small talk
+My name is sneha,"Good! Hi Sneha, how can I help you?",small talk
+My name is sneha,"Cool! Hello Sneha, what can I do for you?",small talk
+My name is sneha,"OK! Hi Sneha, what can I do for you?",small talk
+I am hungry,I can help you prepare your meal! What are your favorite dishes?,small talk
+I am hungry,I can help you prepare your food! What are your food preferences?,small talk
+I am hungry,I can help you prepare your meal! Anything specific that you would like to have?,small talk
+Anything vegan,Do you have any allergies?,small talk
+"No, I don't have any allergies",I found the following for you. Radish Slaw?,small talk
+Can I have the ingredients for radish slaw?,"The ingredients for radish slaw are 1/2 pound radishes, trimmed and grated coarse (about 2 cups), 3 cups finely shredded cabbage, 1 cup coarsely grated carrots, 1/2 cup thinly sliced red onion, 2 tablespoons fresh lemon juice, 1/2 teaspoon sugar, 2 tablespoons olive oil, 2 tablespoons finely chopped fresh coriander, mint, or parsley leaves.",information retrieval
+What is the recipe for radish slaw?,"The instructions for Radish Slaw are as follows. In a bowl toss together the radishes, the cabbage, the carrots, the onion, the lemon juice, the sugar, the oil, the coriander, and salt and pepper to taste.",information retrieval
+What are the calories in radish slaw?,The number of calories found in radish slaw is 103.,information retrieval
+Can I have the calories for cheese and mustard crackers? ,The  number of calories found in mustard and cheese crackers is 37.,information retrieval
+Can I have the recipe for pan-fried hawaiian pizza,"The instructions for Pizza 6: Pan-fried Hawaiian Pizza are as follows. Preheat the broiler., Add a little oil to a medium cast-iron pan and fry the ham over medium-low heat until it's a little brown and crispy, about 3 minutes. Set aside., Roll each pizza dough half into circles the size of your cast-iron pan. The dough will probably be slightly thicker than what you're used to., Heat the pan to medium and add about 1 tablespoon of olive oil. Add 1 piece of the rolled-out dough. Cook for 2 to 3 minutes, until the dough is bubbly on top and browned underneath. Flip, add half of the sauce, half of the mozzarella, half of the ham, and half of the pineapple. Cook another 2 minutes, until the bottom is cooked, then slip under the broiler for 2 to 3 minutes, until the cheese looks bubbly and the pineapple is slightly caramelized. Top with basil. Remove the pizza from the pan, and repeat with the other piece of dough.",information retrieval
+I am allergic to dairy,Thank you for letting me know!,small talk
+I am allergic to dairy,Thank you for sharing!,small talk
+Who are you?,You can call me Berry,small talk
+Who are you?,Call me Berry,small talk
+Who are you?,I am Berry,small talk
+Add expiration date for milk on 2021/11/05,Best before date 2021/12/05 has been added for milk,food tracker
+Add expiration date for flour on 2022/11/30,Expiration date 2022/11/30 has been added for flour,food tracker
+Add exp date for eggs on 2021/11/26,Expiration date 2021/11/05 has been added for eggs,food tracker
+Delete expired items,Expired items have been removed!,food tracker
+Remove milk from the list,Milk has been deleted!,food tracker
+Remove all items on food tracker,All items deleted!,food tracker
+What is panna cotta?,Here's what you need to know about Cherry-Topped Almond Panna Cotta : Panna cotta is an Italian custard dessert. It's similar to pudding but is thickened with gelatin instead of egg yolks. This version is a velvety almond custard topped with fresh cherries and a candied almond garnish.,information retrieval
+What's the amount of calories in chocolate cupcakes with peanut butter?,The number of calories found in  chocolate cupcakes with peanut butter is 375.8,information retrieval
+Can I get the baking instructions for black forest cake?,"The instructions for black forest cake are as follows: drain cherries , reserving 1 / 2 cup juice', 'combine reserved cherry juice , cherries , granulated sugar and cornstarch in a saucepan', 'cook and stir over low heat until thickened', 'add vanille and stir', 'split each cake layer in half horizontally', 'crumble one half layer', ""set asidebeat cold whipping cream and confectioner's sugar in a large bowl with an electric mixer on high speed until stiff peaks form"", 'reserve 1 and 1 / 2 cups whipped cream for decorative piping place one cake layer on serving plate', 'spread with 1 cup whipped cream', 'top with 3 / 4 cup cherry topping', 'top with second layer , 1 cup whipped cream and 3 / 4 cup cherry topping', 'top with third cake layer', 'frost cake sides with remaining whipped cream', 'pat gently with reserved cake crumbs', 'spoon reserved 1 and 1 / 2 cups whipped cream into pastry bag fitted with star', 'spoon remaining cherry topping over top of cake",information retrieval
+What are the ingredients for lentil soup?,"The ingredients for lentil soup are olive oil, carrots, celery, onion, 'salt and pepper', garlic, dried thyme, dried bay leaf, whole tomatoes, water, lentils, wine vinegar",information retrieval
+What is the protein amount in salmon stew?,The protein amount found in salmon stew is 57.,information retrieval
+What are plum puffs?,"Here's what you need to know about plum puffs: this recipe, from bluebird hill farms, was named for marilla's famous plum puffs in the anne of green gables books by l.m. montgomery. they are a plummy muffin, dipped into butter and then cinnamon sugar; i've seen other muffin recipes called ""puffs"", too, and they seem to me a more likely produce from an old-timey farm kitchen than something more akin to cream puffs--which is how some fans envision plum puffs. since there is no ""official"" recipe, we can only guess--but this recipe fits my vision to a ""t""! instructions for preparing plum pulp are included at the end of the recipe; it may be frozen or used for jam, as well. while the recipe doesn't specify, i'd think a cooking or dual-purpose english plum, such as victoria, would be ideal. times are estimated, and do not include preparation of plum pulp or cooling time",information retrieval
+Delete expired items,Expired items have been deleted!,food tracker
+Tell me a food fact,Did you know that raspberries are a member of the rose family?,small talk
+Tell me a food fact,Did you know that apples give you more energy than coffee?,small talk
+Tell me a food fact,Did you know that peanut butter can help lower cholesterol?,small talk
+Tell me a food fact,Did you know that Hawaiian pizza didn't come from Hawaii? It was invented in Canada.,small talk
+Tell me a food fact,Did you know that too much nutmeg can get you high?,small talk
+Tell me a food fact,Did you know that cilantro and coriander are the same thing?,small talk
+Tell me a food fact,Did you know that honey never goes bad?,small talk
+What is the weather like today?,I am sorry. I do not understand you :(,small talk
+What is the weather like today?,Can you please try rephrasing?,small talk
+What is the weather like today?,I am sorry. I don't know :(,small talk
+What is the weather like today?,I am sorry. I have no idea.,small talk

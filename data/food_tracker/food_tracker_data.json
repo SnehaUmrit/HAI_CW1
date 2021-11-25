@@ -1,0 +1,64 @@
+{ "intents":  [
+  {
+                  "tag": "updateFoodTracker",
+                  "patterns": [
+                        "Add expiration date for flour on 2021/11/9 ",
+                       "Add exp date for eggs on 2022/02/8",
+                       "Add best before date for milk on 2021/11/1"
+                  ],
+                  "responses": [
+                       "Expiration date <EXP_DATE> has been added for <FOOD_ITEM>",
+                       "Best before date <EXP_DATE> has been added for <FOOD_ITEM>"
+                  ]
+            },
+            {
+                  "tag": "fetchFoodTrackerAll",
+                  "patterns": [
+                        "Fetch all items from food tracker", "Get all items from food tracker", "get all items", "fetch all items"
+                  ],
+                  "responses": [
+                       "The following items have been fetched from your food tracker: <FETCH_ITEMS>", "<FETCH_ITEMS>"
+                  ]
+            },
+            {
+                  "tag": "fetchFoodTrackerExpired",
+                  "patterns": [
+                        "Fetch expired items", "Get expired items", "What are the expired items"
+
+                  ],
+                  "responses": [
+                       "The following items are out of date: <FETCH_ITEMS>", "<FETCH_ITEMS>"
+                  ]
+            },
+            {
+                  "tag": "deleteAllFoodTracker",
+                  "patterns": [
+                        "delete all items on food tracker", "remove all items on food tracker", "delete all items", "remove all items"
+                  ],
+                  "responses": [
+                       "All items deleted!",
+                        "All items have been deleted!"
+                  ]
+            },
+            {
+                  "tag": "deleteItemFoodTracker",
+                  "patterns": [
+                        "Delete flour from the list", "Remove cheese from the list",
+                        "Delete eggs from food tracker", "Remove yoghurt from food tracker"
+                  ],
+                  "responses": [
+                       "<FOOD_ITEM> has been deleted!",
+                        "<FOOD_ITEM> has been removed!"
+                  ]
+            },
+            {
+                  "tag": "deleteExpiredFoodTracker",
+                  "patterns": [
+                        "delete expired items", "remove expired items", "delete expired items on food tracker", "remove all items on food tracker"
+                  ],
+                  "responses": [
+                       "Expired items have been removed!",
+                       "Expired items have been deleted!"
+                  ]
+            }
+]}
