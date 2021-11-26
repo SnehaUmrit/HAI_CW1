@@ -22,36 +22,36 @@ The main functionalities of the bot include small talk, food recommendation, ite
 ### Small Talk
 <p float="left">
   <img
-       src=
-       width="300" height="400"/>
+       src=https://github.com/SnehaUmrit/HAI_CW1/blob/main/screenshots/small-talk-1.png
+       />
 </p>
 
 ### Identity management
 <p float="left">
   <img
-       src=
-       width="300" height="400"/>
+       src=https://github.com/SnehaUmrit/HAI_CW1/blob/main/screenshots/identity-management.png
+       />
 </p>
 
 ### Item tracking
 <p float="left">
   <img
-       src=
-       width="300" height="400"/>
+       src=https://github.com/SnehaUmrit/HAI_CW1/blob/main/screenshots/food-tracker.png
+       />
 </p>
 
 ### Meal recommendation
 <p float="left">
   <img
-       src=
-       width="300" height="400"/>
+       src=https://github.com/SnehaUmrit/HAI_CW1/blob/main/screenshots/meal-rec.png
+       />
 </p>
 
 ### Information retrieval
 <p float="left">
   <img
-       src=
-       width="300" height="400"/>
+       src=https://github.com/SnehaUmrit/HAI_CW1/blob/main/screenshots/info-retrieval.png
+       />
 </p>
 
 
