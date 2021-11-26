@@ -96,7 +96,7 @@ def cosine_similarity(intent, string_1, string_2, ngram):
             if item not in vocab:
                 vocab.append(item)
 
-                # Creating bag-of-word
+    # Creating bag-of-word
     bow = []
     for doc in docs:
         vector = np.zeros(len(vocab))
@@ -105,8 +105,7 @@ def cosine_similarity(intent, string_1, string_2, ngram):
             vector[index] += 1
 
         bow.append(vector)
-    # print(vocab)
-    # print(bow)
+
     query = bow[0]
     bow = dict(d1=bow[1])
     for d in bow.keys():
@@ -114,25 +113,7 @@ def cosine_similarity(intent, string_1, string_2, ngram):
             sim = 1 - spatial.distance.cosine(query, bow[d])
         except:
             sim = 0
-    # print(sim)
     return sim
-
-
-# cosine_similarity("food tracker", "add expiration date for flour on 2022/02/15", "Add expiration date for flour on 2021/11/9 ", 1)
-# cosine_similarity("information retrieval", 'cheese and bread', "hello who are you", 2)
-
-# r = cosine_similarity("food recommender", "i like cheese and bread", "i like cheese", '2')
-# print(r)
-# r = cosine_similarity("food recommender", "i like cheese and bread", "i like cheese", '3')
-# print(r)
-# r = cosine_similarity("food recommender", "i like cheese and bread", "i like cheese", '4')
-# print(r)
-# r = cosine_similarity("small talk", "hello how are you", "hello how are you", '2')
-# print(r)
-# r = cosine_similarity("small talk", "hello how are you", "hello how are you", '3')
-# print(r)
-# r = cosine_similarity("small talk", "hello how are you", "hello how are you", '4')
-# print(r)
 
 def ingredient_search(user_input):
     ingredients_search = ["ingredients", "ingredient", "cooking items", "baking items"]
@@ -311,15 +292,8 @@ def get_similarity(intent, string_1, string_2, ngram, metric):
     if metric == 'manhattan':
         dis = manhattan(bow[0], bow[1])
         sim = 1 / (1 + dis)
-    elif metric == 'jaccard':
-        sim = jaccard(bow[0], bow[1])
     elif metric == 'euclidean':
         dis = distance.euclidean(bow[0], bow[1])
         sim = 1 / (1 + dis)
-
     return sim
 
-def jaccard(list1, list2):
-    intersection = len(list(set(list1).intersection(list2)))
-    union = (len(list1) + len(list2)) - intersection
-    return float(intersection) / union

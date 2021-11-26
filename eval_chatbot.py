@@ -34,69 +34,73 @@ def get_response(user_input, df):
             json_file = json.load(open(filepath, "r"))
             for intent in json_file["intents"]:
                 for pattern in intent["patterns"]:
-                    sim = cosine_similarity(user_intent, user_input, pattern, 3)
+                    sim = cosine_similarity(user_intent, user_input, pattern, 2)
                     if sim >= max_sim:
                         max_sim = sim
+                        # print(max_sim)
                         response = random.choice(intent["responses"])
-                        #print('functions: ' + intent['tag'])
+                        tag = intent['tag']
+                        # print('functions: ' + intent['tag'])
 
-                        if intent['tag'] == 'updateUserName':
-                            name = get_user_name(user_input)
-                            user_name.append(name)
-                            response = response.replace('<HUMAN>', name)
-
-                        if intent['tag'] == 'userNameQuery':
-                            user_name = list(filter(None, user_name))
-                            if len(user_name) == 0:
-                                response = 'I am sorry, you have not told me your name yet!'
-                            else:
-                                response = response.replace('<HUMAN>', user_name[-1])
-
-                        if intent['tag'] == 'updateTime':
-                            response = response.replace('<TIME>', get_datetime())
-
-                        if intent['tag'] == 'updateUserFoodPreferences':
-                            # get user preferences and allergies when stated by user
-                            likes = get_user_likes(user_input)
-                            #print(likes)
-                            user_preferences.append(likes)
-                            user_preferences = list(filter(None, user_preferences))
-
-                            allergies = get_user_allergies(user_input)
-                            #print('allergies: '+ allergies)
-                            user_allergies.append(allergies)
-                            user_allergies = list(filter(None, user_allergies))
-
-                            if check_non_null('user_allergies') :
-                                allergies = get_last_non_null('user_allergies')
-                                if allergies == 'no-allergies':
-                                    meal = recommend_meal(get_last_non_null('user_likes'),'no-allergies')
-                                    response = response.replace('<FOOD_ITEMS>', meal)
-                                else:
-                                    meal = recommend_meal(get_last_non_null('user_likes'),
-                                                          get_last_non_null('user_allergies'))
-                                    response = response.replace('<FOOD_ITEMS>', meal)
-                            else:
-                                response = "Do you have any allergies?"
-
-                        if intent['tag'] == 'noFoodAllergies' and check_non_null('user_likes'):
-                            user_allergies.append('no-allergies')
-                            meal = recommend_meal(get_last_non_null('user_likes'), 'no-allergies')
-                            response = response + ' Would you like to try ' + meal + '?'
-
-                        if intent['tag'] == 'updateUserFoodAllergies':
-                            allergies = get_user_allergies(user_input)
-                            # print('allergies: ' + allergies)
-                            user_allergies.append(allergies)
-                            user_allergies = list(filter(None, user_allergies))
-                            # print('l'+str(check_non_null('user_likes')))
-                            # print(check_non_null('user_allergies'))
-                            if check_non_null('user_likes'):
-                                meal = recommend_meal(get_last_non_null('user_likes'), allergies)
-                                response = response + ' I found the following for you. ' + meal + '?'
-
-                        if sim < 0.2:
+                        if max_sim < 0.2:
                             response = random.choice(apology_responses)
+
+        if tag == 'updateUserName':
+            name = get_user_name(user_input)
+            user_name.append(name)
+            response = response.replace('<HUMAN>', name)
+
+        if tag == 'userNameQuery':
+            user_name = list(filter(None, user_name))
+            if check_non_null('user_name'):
+                response = response.replace('<HUMAN>', get_last_non_null('user_name'))
+            elif len(user_name) != 0:
+                response = response.replace('<HUMAN>', user_name[-1])
+            else:
+                response = 'I am sorry, you have not told me your name yet!'
+
+        if tag == 'updateTime':
+            response = response.replace('<TIME>', get_datetime())
+
+        if tag == 'updateUserFoodPreferences':
+            # get user preferences and allergies when stated by user
+            likes = get_user_likes(user_input)
+            # print(likes)
+            user_preferences.append(likes)
+            user_preferences = list(filter(None, user_preferences))
+
+            allergies = get_user_allergies(user_input)
+            # print('allergies: '+ allergies)
+            user_allergies.append(allergies)
+            user_allergies = list(filter(None, user_allergies))
+
+            if check_non_null('user_allergies'):
+                allergies = get_last_non_null('user_allergies')
+                if allergies == 'no-allergies':
+                    meal = recommend_meal(get_last_non_null('user_likes'), 'no-allergies')
+                    response = response.replace('<FOOD_ITEMS>', meal)
+                else:
+                    meal = recommend_meal(get_last_non_null('user_likes'),
+                                          get_last_non_null('user_allergies'))
+                    response = response.replace('<FOOD_ITEMS>', meal)
+            else:
+                response = "Do you have any allergies?"
+
+        if tag == 'noFoodAllergies' and check_non_null('user_likes'):
+            user_allergies.append('no-allergies')
+            meal = recommend_meal(get_last_non_null('user_likes'), 'no-allergies')
+            response = response + ' Would you like to try ' + meal + '?'
+
+        if tag == 'updateUserFoodAllergies':
+            allergies = get_user_allergies(user_input)
+            # print('allergies: ' + allergies)
+            user_allergies.append(allergies)
+            user_allergies = list(filter(None, user_allergies))
+            # print('l'+str(check_non_null('user_likes')))
+            # print(check_non_null('user_allergies'))
+            if check_non_null('user_likes'):
+                meal = recommend_meal(get_last_non_null('user_likes'), allergies)
+                response = response + ' I found the following for you. ' + meal + '?'
 
         # print("Bot: " + response)
         bot.append(response)

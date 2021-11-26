@@ -100,8 +100,8 @@
             {
                   "tag": "updateUserName",
                   "patterns": [
-                        "Adam",
-                        "My name is Adam",
+                        "I am Adam",
+                        "my name is Adam",
                         "This is Adam",
                         "I am Adam",
                         "It is Adam",
@@ -131,7 +131,7 @@
                   ],
                   "responses": [
                         "Hello, I am great, how are you? ",
-                        "Hello, how are you? I am great thanks! ",
+                        "Hello, I am great thanks! How are you? ",
                         "Hello, I am good thank you, how are you? ",
                         "Hi, I am great, how are you? ",
                         "Hi, how are you? I am great thanks! ",
@@ -140,25 +140,42 @@
                   ]
             },
             {
-                  "tag": "userNameQuery",
+                  "tag": "userFineResponses",
                   "patterns": [
-                        "Good thanks! My name is Adam",
-                        "Good thanks! This is Adam",
-                        "Good thanks! I am Adam",
-                        "Good thanks! It is Adam",
-                        "Great thanks! My name is Bella",
-                        "Great thanks! This is Bella",
-                        "Great thanks! I am Bella",
-                        "Great thanks! It is Bella"
+                        "fine",
+                        "great",
+                        "good, thanks",
+                        "ok",
+                        "fine thank you",
+                        "great thanks",
+                        "ok, thanks",
+                        "Great thanks!"
                   ],
                   "responses": [
-                        "Great! Hi <HUMAN>! How can I help?",
-                        "Good! Hi <HUMAN>, how can I help you?",
-                        "Cool! Hello <HUMAN>, what can I do for you?",
-                        "OK! Hola <HUMAN>, how can I help you?",
-                        "OK! hi <HUMAN>, what can I do for you?"
+                        "Great! Can I have your name please?",
+                        "Good! How may I call you?",
+                        "Cool! What is your name?",
+                        "OK! May I have your name please?"
                   ]
             },
+			{
+				"tag": "userNotFineResponses",
+                  "patterns": [
+                        "not fine.",
+                        "not great",
+                        "sad",
+                        "unhappy",
+                        "unwell",
+                        "depressed"
+                  ],
+                  "responses": [
+                        "Sad to hear that! How can I help you?",
+                        "I can help cheer you up with food!",
+                        "Sorry to hear that! Is there anything I can do to help?",
+                        "Anything I can do to help?"
+                  ]
+				
+			},
             {
                   "tag": "userNameQuery",
                   "patterns": [
