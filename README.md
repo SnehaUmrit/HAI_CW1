@@ -1,5 +1,6 @@
 # BERRY, THE FOOD BOT
 This file provides the instrcutions required to run the implemented chatbot along with a brief overview of the different components of the implemented codes.
+Github repository can be accessed from [https://github.com/SnehaUmrit/HAI_CW1](https://github.com/SnehaUmrit/HAI_CW1).
 
 ## Running the chatbot
 
@@ -63,7 +64,7 @@ In order to exit from the bot terminal, type 'exit' or 'quit' as desired.
 
 ## Folder Arrangement
 
-**raw_data/ :** Contains raw dataset as obtained from Kaggle (Not included in submission codes due to huge file size)
+**raw_data/ :** Contains raw dataset as obtained from Kaggle (Not included in submission codes due to huge file size). Access me [here](https://github.com/SnehaUmrit/HAI_CW1/tree/main/raw_data)!
 
 **data/ :** Contains pre-processed dataset divided into different intent folders
 
