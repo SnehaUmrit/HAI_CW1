@@ -35,7 +35,7 @@ def get_response(user_input, df):
         for intent in json_file["intents"]:
             for pattern in intent["patterns"]:
                 sim = cosine_similarity(user_intent, user_input, pattern, 2)
-                if sim >= max_sim:
+                if sim > max_sim:
                     max_sim = sim
                     #print(max_sim)
                     response = random.choice(intent["responses"])
