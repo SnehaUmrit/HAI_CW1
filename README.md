@@ -64,7 +64,7 @@ In order to exit from the bot terminal, type 'exit' or 'quit' as desired.
 
 ## Folder Arrangement
 
-**raw_data/ :** Contains raw dataset as obtained from Kaggle (Not included in submission codes due to huge file size). Access me [here](https://github.com/SnehaUmrit/HAI_CW1/tree/main/raw_data)!
+**raw_data/ :** Contains raw dataset as obtained from Kaggle (Not included in submission codes due to huge file size). Find me [here!](https://github.com/SnehaUmrit/HAI_CW1/tree/main/raw_data)!
 
 **data/ :** Contains pre-processed dataset divided into different intent folders
 
