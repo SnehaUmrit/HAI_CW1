@@ -1,6 +1,5 @@
 # BERRY, THE FOOD BOT
 This file provides the instructions required to run the implemented chatbot along with a brief overview of the different components of the implemented codes.
-Github repository can be accessed from [https://github.com/SnehaUmrit/HAI_CW1](https://github.com/SnehaUmrit/HAI_CW1).
 
 ## Running the chatbot
 
